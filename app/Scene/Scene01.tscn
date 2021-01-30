@@ -26,7 +26,7 @@ extents = Vector2( 511.759, 25.5231 )
 extents = Vector2( 10, 351.401 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 36.0008, 78.2781 )
+extents = Vector2( 24, 60.3972 )
 
 [node name="Scene01" type="Node2D"]
 position = Vector2( -0.529724, 0.529739 )
@@ -1289,15 +1289,15 @@ shape = SubResource( 2 )
 [node name="PlayerNode" type="Node2D" parent="."]
 
 [node name="Player" type="KinematicBody2D" parent="PlayerNode"]
-position = Vector2( 196.431, 347.963 )
+position = Vector2( 192.53, 335.47 )
 script = ExtResource( 18 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="PlayerNode/Player"]
-position = Vector2( -91.1803, 95.0809 )
-scale = Vector2( 5.09995, 5.18844 )
+position = Vector2( -124, 112 )
+scale = Vector2( 3.75, 4 )
 texture = ExtResource( 17 )
 hframes = 10
 region_enabled = true
@@ -1305,5 +1305,10 @@ region_rect = Rect2( 0, 224, 320, 32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player"]
 visible = false
-position = Vector2( -96.5351, 100.143 )
+position = Vector2( -128.841, 115.784 )
 shape = SubResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerNode/Player"]
+visible = false
+position = Vector2( -130.767, 29.7452 )
+polygon = PoolVector2Array( 30.7059, 36.1598, 30.4086, 69.7549, 30.7059, 122.08, 30.33, 134.894, 30.1197, 146.456, -16.55, 146.035, -17.192, 106.219, -16.5974, 47.9475, -1.69994, 25.1596, 16.7328, 25.1596 )
