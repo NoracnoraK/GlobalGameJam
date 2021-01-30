@@ -8,7 +8,7 @@
 [ext_resource path="res://code/Player.gd" type="Script" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 41.6893, 74.2497 )
+extents = Vector2( 11.1969, 39.785 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "idle"
@@ -90,15 +90,12 @@ tile_data = PoolIntArray( 131073, 2, 0, 131082, 2, 0, 131096, 2, 0, 131111, 2, 0
 [node name="PlayerNode" type="Node2D" parent="."]
 
 [node name="Player" type="KinematicBody2D" parent="PlayerNode"]
-position = Vector2( 235.242, 301.834 )
+position = Vector2( 290.181, 300.612 )
 script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="PlayerNode/Player"]
-position = Vector2( -92, 121 )
-scale = Vector2( 3.75, 4 )
+position = Vector2( -131.058, 165.727 )
+scale = Vector2( 2.1226, 2.13637 )
 texture = ExtResource( 3 )
 flip_h = true
 hframes = 36
@@ -106,8 +103,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 1728, 48 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player"]
-visible = false
-position = Vector2( -96.0124, 134.98 )
+position = Vector2( -130.954, 173.063 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerNode/Player"]
@@ -116,4 +112,5 @@ anims/jump = SubResource( 3 )
 anims/walk = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="PlayerNode/Player"]
+position = Vector2( 113.951, 38.9488 )
 current = true
