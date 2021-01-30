@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Img/tile173.png" type="Texture" id=1]
 [ext_resource path="res://Img/tile13.png" type="Texture" id=2]
@@ -16,12 +16,17 @@
 [ext_resource path="res://Img/tile176.png" type="Texture" id=14]
 [ext_resource path="res://Img/tile169.png" type="Texture" id=15]
 [ext_resource path="res://Img/tile10.png" type="Texture" id=16]
+[ext_resource path="res://scene/rogue spritesheet calciumtrice.png" type="Texture" id=17]
+[ext_resource path="res://code/Player.gd" type="Script" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 511.759, 25.5231 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 351.401 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 36.0008, 78.2781 )
 
 [node name="Scene01" type="Node2D"]
 position = Vector2( -0.529724, 0.529739 )
@@ -1280,3 +1285,25 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sol2/StaticBody2D"]
 position = Vector2( -3.21428, 251.002 )
 shape = SubResource( 2 )
+
+[node name="PlayerNode" type="Node2D" parent="."]
+
+[node name="Player" type="KinematicBody2D" parent="PlayerNode"]
+position = Vector2( 196.431, 347.963 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerNode/Player"]
+position = Vector2( -91.1803, 95.0809 )
+scale = Vector2( 5.09995, 5.18844 )
+texture = ExtResource( 17 )
+hframes = 10
+region_enabled = true
+region_rect = Rect2( 0, 224, 320, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player"]
+visible = false
+position = Vector2( -96.5351, 100.143 )
+shape = SubResource( 3 )
