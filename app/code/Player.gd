@@ -3,6 +3,7 @@ extends KinematicBody2D
 var vel = Vector2()
 var speed = 200
 var max_speed = 250
+var starting_position
 
 const GRAVITY = 1000
 const ACCEL = 6
@@ -10,8 +11,10 @@ const UP = Vector2(0, -1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+   starting_position = position
 
+func respawn():
+   position = starting_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -43,8 +46,14 @@ func movment_loop():
 
 	if jump == true and is_on_floor():
 		vel.y = -500
-	
+
 	if vel.y < 0:
 		$AnimationPlayer.play("jump")
 	if vel.y > 0:
-		$AnimationPlayer.play("jump")
+		$AnimationPlayer.play("jump")	
+
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.name == "spider" or collision.collider.name == "Spikes":
+			$AnimationPlayer.play("death")
+			set_physics_process(false)

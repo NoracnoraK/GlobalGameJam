@@ -19,6 +19,13 @@ config/name="app"
 run/main_scene="res://scene/Scene01.tscn"
 config/icon="res://icon.png"
 
+[layer_names]
+
+2d_physics/layer_1="env"
+2d_physics/layer_2="player"
+2d_physics/layer_3="ennemy"
+2d_physics/layer_4="attack"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
