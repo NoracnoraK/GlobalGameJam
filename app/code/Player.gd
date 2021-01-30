@@ -42,7 +42,7 @@ func movment_loop():
 		$AnimationPlayer.play("idle")
 
 	if jump == true and is_on_floor():
-		vel.y = -400
+		vel.y = -500
 	
 	if vel.y < 0:
 		$AnimationPlayer.play("jump")
