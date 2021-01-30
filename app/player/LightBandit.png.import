@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rogue spritesheet calciumtrice.png-5083a83092b848e043af64f7ea98e5a5.stex"
+path="res://.import/LightBandit.png-c4e77345fa65a1bdc928011ac12d44f0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/rogue spritesheet calciumtrice.png"
-dest_files=[ "res://.import/rogue spritesheet calciumtrice.png-5083a83092b848e043af64f7ea98e5a5.stex" ]
+source_file="res://player/LightBandit.png"
+dest_files=[ "res://.import/LightBandit.png-c4e77345fa65a1bdc928011ac12d44f0.stex" ]
 
 [params]
 

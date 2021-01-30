@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rogue spritesheet calciumtrice.png-d649751a7f14618ff774d068d43782f6.stex"
+path="res://.import/player.png-1ad27fc2a62fa126eae918723933dd6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/rogue spritesheet calciumtrice.png"
-dest_files=[ "res://.import/rogue spritesheet calciumtrice.png-d649751a7f14618ff774d068d43782f6.stex" ]
+source_file="res://player/player.png"
+dest_files=[ "res://.import/player.png-1ad27fc2a62fa126eae918723933dd6f.stex" ]
 
 [params]
 
