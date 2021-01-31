@@ -18,6 +18,14 @@ func respawn():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var quit = Input.is_action_pressed("ui_cancel")
+	var revive = Input.is_action_pressed("ui_down")
+	
+	if quit:
+		get_tree().quit()
+	if revive:
+		respawn()
+		set_physics_process(true)
 	pass
 
 func _physics_process(delta): # execute 60 ticks par seconde
