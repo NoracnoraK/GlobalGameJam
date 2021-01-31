@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://TileSet/tileGround.res" type="TileSet" id=1]
 [ext_resource path="res://TileSet/tile01.res" type="TileSet" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://TileSet/Item.res" type="TileSet" id=7]
 [ext_resource path="res://TileSet/SpikesTile.res" type="TileSet" id=8]
 [ext_resource path="res://scene/Scene01.gd" type="Script" id=9]
+[ext_resource path="res://Scene/GUI.tscn" type="PackedScene" id=10]
 
 [node name="Scene01" type="Node2D"]
 position = Vector2( -0.529724, 0.529739 )
@@ -58,3 +59,8 @@ tile_set = ExtResource( 8 )
 cell_size = Vector2( 48, 48 )
 format = 1
 tile_data = PoolIntArray( 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786461, 0, 0, 786462, 0, 0, 786463, 0, 0, 786464, 0, 0, 786465, 0, 0, 786466, 0, 0, 786467, 0, 0, 786468, 0, 0, 786469, 0, 0, 786470, 0, 0, 786471, 0, 0, 1310772, 0, 0, 1310773, 0, 0, 1310774, 0, 0, 1310775, 0, 0, 1310776, 0, 0, 1310777, 0, 0, 1310778, 0, 0, 1310779, 0, 0, 1310783, 0, 0, 1310784, 0, 0, 1310785, 0, 0, 1310786, 0, 0, 1310787, 0, 0, 1310788, 0, 0, 1310789, 0, 0, 1310800, 0, 0, 1310801, 0, 0, 1310802, 0, 0, 1310803, 0, 0, 1310804, 0, 0, 1310805, 0, 0, 1310806, 0, 0, 1310807, 0, 0, 1310808, 0, 0, 1310809, 0, 0, 1310816, 0, 0, 1310817, 0, 0, 1310818, 0, 0, 1310819, 0, 0, 1310820, 0, 0 )
+
+[node name="Control" parent="." instance=ExtResource( 10 )]
+[connection signal="coin_add" from="." to="Control" method="_on_Scene01_coin_add"]
+[connection signal="crown_win" from="." to="Control" method="_on_Scene01_crown_win"]
+[connection signal="ruby_add" from="." to="Control" method="_on_Scene01_ruby_add"]

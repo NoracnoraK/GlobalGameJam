@@ -1,5 +1,7 @@
 extends Area2D
 
+signal crown_collected(body)
+
 var textures = {
 	"Coin" : "res://Item/MonedaD.png",
 	"Ruby" : "res://Item/spr_coin_roj.png",
@@ -15,6 +17,7 @@ func init(type, pos):
 
 func _on_Area2D_body_entered(body):
 	$CollisionShape2D.disabled = true
+	emit_signal("crown_collected", _type)
 	queue_free()
 
 func _physics_process(delta):
