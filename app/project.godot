@@ -18,6 +18,7 @@ _global_script_class_icons={
 config/name="app"
 run/main_scene="res://scene/Scene01.tscn"
 config/icon="res://icon.png"
+config/icon.Windows="res://icon.png"
 
 [layer_names]
 
