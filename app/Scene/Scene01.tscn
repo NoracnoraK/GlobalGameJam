@@ -53,10 +53,22 @@ cell_size = Vector2( 48, 48 )
 format = 1
 tile_data = PoolIntArray( 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786461, 0, 0, 786462, 0, 0, 786463, 0, 0, 786464, 0, 0, 786465, 0, 0, 786466, 0, 0, 786467, 0, 0, 786468, 0, 0, 786469, 0, 0, 786470, 0, 0, 786471, 0, 0, 1310772, 0, 0, 1310773, 0, 0, 1310774, 0, 0, 1310775, 0, 0, 1310776, 0, 0, 1310777, 0, 0, 1310778, 0, 0, 1310779, 0, 0, 1310783, 0, 0, 1310784, 0, 0, 1310785, 0, 0, 1310786, 0, 0, 1310787, 0, 0, 1310788, 0, 0, 1310789, 0, 0, 1310800, 0, 0, 1310801, 0, 0, 1310802, 0, 0, 1310803, 0, 0, 1310804, 0, 0, 1310805, 0, 0, 1310806, 0, 0, 1310807, 0, 0, 1310808, 0, 0, 1310809, 0, 0, 1310816, 0, 0, 1310817, 0, 0, 1310818, 0, 0, 1310819, 0, 0, 1310820, 0, 0 )
 
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 59.0
+margin_top = 314.0
+margin_right = 197.0
+margin_bottom = 374.0
+text = "I need to seek the 
+legacy of my father.
+His Crown!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PlayerNode" type="Node2D" parent="."]
 
 [node name="Player" parent="PlayerNode" instance=ExtResource( 6 )]
-position = Vector2( 245.93, 294.455 )
+position = Vector2( 248.672, 303.655 )
 
 [node name="spider" parent="PlayerNode" instance=ExtResource( 3 )]
 
@@ -67,6 +79,18 @@ format = 1
 tile_data = PoolIntArray( 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786461, 0, 0, 786462, 0, 0, 786463, 0, 0, 786464, 0, 0, 786465, 0, 0, 786466, 0, 0, 786467, 0, 0, 786468, 0, 0, 786469, 0, 0, 786470, 0, 0, 786471, 0, 0, 1310772, 0, 0, 1310773, 0, 0, 1310774, 0, 0, 1310775, 0, 0, 1310776, 0, 0, 1310777, 0, 0, 1310778, 0, 0, 1310779, 0, 0, 1310783, 0, 0, 1310784, 0, 0, 1310785, 0, 0, 1310786, 0, 0, 1310787, 0, 0, 1310788, 0, 0, 1310789, 0, 0, 1310800, 0, 0, 1310801, 0, 0, 1310802, 0, 0, 1310803, 0, 0, 1310804, 0, 0, 1310805, 0, 0, 1310806, 0, 0, 1310807, 0, 0, 1310808, 0, 0, 1310809, 0, 0, 1310816, 0, 0, 1310817, 0, 0, 1310818, 0, 0, 1310819, 0, 0, 1310820, 0, 0 )
 
 [node name="Control" parent="." instance=ExtResource( 10 )]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 259.561
+margin_top = -38.7056
+margin_right = 299.561
+margin_bottom = -24.7056
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="coin_add" from="." to="Control" method="_on_Scene01_coin_add"]
 [connection signal="crown_win" from="." to="Control" method="_on_Scene01_crown_win"]
 [connection signal="ruby_add" from="." to="Control" method="_on_Scene01_ruby_add"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

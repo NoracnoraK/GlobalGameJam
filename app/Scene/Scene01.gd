@@ -4,6 +4,8 @@ signal coin_add(val)
 signal crown_win(val)
 signal ruby_add(val)
 
+var pos_crown
+
 func _ready():
 	spawn_item()
 	$TileMap5.hide()
@@ -33,6 +35,7 @@ func spawn_item():
 			var itm = preload("res://Scene/Area2D.tscn")
 			var pos = $TileMap5.map_to_world(cell)
 			pos = pos + $TileMap5.position
+			pos_crown = pos
 			var c = itm.instance()
 			c.init(type, pos + $TileMap5.cell_size/2)
 			add_child(c)
@@ -43,6 +46,15 @@ func _on_coin_picked(body):
 	
 func _on_crow_picked(body):
 	emit_signal("crown_win", 1)
+	pos_crown.y -= 50
+	$Label.set_position(pos_crown)
+	$Label.text = "You Win!\n The Game will stop."
+	$Timer.start()
 
 func _on_ruby_picked(body):
 	emit_signal("ruby_add", 1)
+
+
+func _on_Timer_timeout():
+	get_tree().quit()
+	pass # Replace with function body.

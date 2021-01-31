@@ -173,16 +173,16 @@ __meta__ = {
 }
 
 [node name="TextEdit" type="TextEdit" parent="Control2"]
-margin_left = -374.0
-margin_top = -190.0
-margin_right = -334.0
-margin_bottom = -168.0
+margin_left = 573.041
+margin_top = -201.055
+margin_right = 613.041
+margin_bottom = -179.055
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="Control2"]
-position = Vector2( -355.734, -223.586 )
-scale = Vector2( 0.207439, 0.207439 )
+position = Vector2( 592.947, -226.88 )
+scale = Vector2( 0.158786, 0.157833 )
 texture = ExtResource( 4 )
