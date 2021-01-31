@@ -59,7 +59,6 @@ tile_data = PoolIntArray( 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0
 position = Vector2( 245.93, 294.455 )
 
 [node name="spider" parent="PlayerNode" instance=ExtResource( 3 )]
-<<<<<<< HEAD
 
 [node name="Spikes" type="TileMap" parent="."]
 tile_set = ExtResource( 8 )
@@ -71,5 +70,3 @@ tile_data = PoolIntArray( 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0
 [connection signal="coin_add" from="." to="Control" method="_on_Scene01_coin_add"]
 [connection signal="crown_win" from="." to="Control" method="_on_Scene01_crown_win"]
 [connection signal="ruby_add" from="." to="Control" method="_on_Scene01_ruby_add"]
-=======
->>>>>>> 811be08345fe02fea1c022ab4ef9d3cb7dde81c5
